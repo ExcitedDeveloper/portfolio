@@ -1,6 +1,6 @@
-import React from "react"
+import React, { ReactElement } from 'react'
 
-const Main = () => {
+const Main = (): ReactElement => {
   return <main></main>
 }
 
