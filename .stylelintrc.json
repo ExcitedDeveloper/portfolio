@@ -1,0 +1,6 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "rules": {
+    "unit-disallowed-list": ["px"]
+  }
+}

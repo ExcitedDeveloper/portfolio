@@ -1,4 +1,5 @@
 :root {
+  --primary-color: #0a192f;
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -24,19 +25,21 @@ ol[role='list'] {
 }
 
 /* Set core root defaults */
+html,
+body {
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 /* Set core body defaults */
 body {
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizespeed;
   line-height: 1.5;
+  padding: 1rem 1rem 0;
 }
 
 /* A elements that don't have a class get default styles */
@@ -66,4 +69,19 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-logo {
+  height: 2em;
+  width: 2em;
+}
+
+.header-filler {
+  flex: 1;
 }

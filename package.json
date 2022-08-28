@@ -61,6 +61,10 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "prettier-eslint": "^15.0.1",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-no-px": "^1.0.1",
     "typescript": "^4.7.4"
   },
   "husky": {
