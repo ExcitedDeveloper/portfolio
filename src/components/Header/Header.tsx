@@ -10,7 +10,7 @@ const Header = (): ReactElement => {
           </a>
         </div>
         <div className="header-filler"></div>
-        <div>
+        <div className="header-menu">
           <nav className="primary-navigation">
             <ul aria-label="Primary" className="nav-list">
               <li>

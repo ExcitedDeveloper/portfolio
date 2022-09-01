@@ -71,7 +71,16 @@ svg {
   }
 }
 
+/* SideBar */
+.bm-burger-button {
+  display: block;
+}
+
 /* Header */
+.header-menu {
+  display: none;
+}
+
 .header-container {
   display: flex;
   flex-direction: row;
@@ -84,4 +93,15 @@ svg {
 
 .header-filler {
   flex: 1;
+}
+
+/* Breakpoints */
+@media screen and (min-width: 48rem) {
+  .bm-burger-button {
+    display: none;
+  }
+
+  .header-menu {
+    display: block;
+  }
 }
