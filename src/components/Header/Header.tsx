@@ -1,8 +1,10 @@
 import React, { ReactElement } from 'react'
+import SideBar from '../SideBar'
 
 const Header = (): ReactElement => {
   return (
     <header>
+      <SideBar pageWrapId={'App'} outerContainerId={'App'} />
       <div id="header-container" className="header-container">
         <div>
           <a href="#header-container">

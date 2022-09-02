@@ -6,11 +6,9 @@ import SideBar from './components/SideBar'
 function App(): ReactElement {
   return (
     <div id="App">
-      <SideBar pageWrapId={'page-wrap'} outerContainerId={'App'} />
-      <div id="page-wrap">
-        <Header />
-        <Main />
-      </div>
+      <Header />
+      <Main />
+      {/* <SideBar pageWrapId={'App'} outerContainerId={'App'} /> */}
     </div>
   )
 }

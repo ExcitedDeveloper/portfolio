@@ -39,7 +39,7 @@ html:focus-within {
 body {
   text-rendering: optimizespeed;
   line-height: 1.5;
-  padding: 1rem 1rem 0;
+  padding: 0 1rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -69,11 +69,6 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-/* SideBar */
-.bm-burger-button {
-  display: block;
 }
 
 /* Header */
