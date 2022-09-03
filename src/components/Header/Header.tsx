@@ -1,25 +1,10 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement } from 'react'
 import SideBar from '../SideBar'
 
-interface SideBarStateChange {
-  isOpen: boolean
-}
-
 const Header = (): ReactElement => {
-  const [sideBarIsOpen, setSideBarIsOpen] = useState(false)
-
-  const sideBarStateChange = (state: SideBarStateChange): void => {
-    setSideBarIsOpen(state.isOpen)
-  }
-
   return (
     <header>
-      <SideBar
-        pageWrapId={'header-container'}
-        outerContainerId={'App'}
-        isOpen={sideBarIsOpen}
-        onStateChange={sideBarStateChange}
-      />
+      <SideBar pageWrapId={'header-container'} outerContainerId={'App'} />
       <div id="header-container" className="header-container">
         <div>
           <a href="#header-container">
