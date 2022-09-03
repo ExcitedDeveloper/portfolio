@@ -4,7 +4,13 @@ import './SideBar.css'
 
 const SideBar = (props: any): ReactElement => {
   return (
-    <Menu className={'sidebar-menu'} {...props} right>
+    <Menu
+      className={'sidebar-menu'}
+      {...props}
+      right
+      isOpen={props.isOpen}
+      onStateChange={props.onStateChange}
+    >
       <a className="sidebar-menu-item" href="/">
         Home
       </a>
