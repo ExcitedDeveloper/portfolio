@@ -38,6 +38,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
+  width: 60%;
 }
 
 /* General sidebar styles */
@@ -81,5 +82,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 @media screen and (min-width: 48rem) {
   .bm-burger-button {
     display: none;
+  }
+}
+
+@media screen and (min-width: 33rem) {
+  .bm-menu-wrap {
+    width: 25rem;
   }
 }

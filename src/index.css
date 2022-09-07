@@ -1,6 +1,7 @@
 :root {
   --primary-color: #0a192f;
   --header-spacing: 2rem;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -72,6 +73,13 @@ svg {
   }
 }
 
+/* App */
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 /* Header */
 .header-menu {
   display: none;
@@ -92,9 +100,30 @@ svg {
   flex: 1;
 }
 
+/* Hamburger menu */
+.hamburger-menu {
+  display: block;
+}
+
+main {
+  flex: 1;
+}
+
+/* Misc */
+.blur {
+  filter: blur(0.313rem) brightness(0.7);
+  transition: var(--transition);
+  pointer-events: none;
+  user-select: none;
+}
+
 /* Breakpoints */
 @media screen and (min-width: 48rem) {
   .header-menu {
     display: block;
+  }
+
+  .hamburger-menu {
+    display: none;
   }
 }

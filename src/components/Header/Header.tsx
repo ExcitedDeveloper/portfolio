@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react'
-import SideBar from '../SideBar'
+import SideBar3 from '../SideBar3'
 
 const Header = (): ReactElement => {
   return (
     <header>
-      <SideBar pageWrapId={'header-container'} outerContainerId={'App'} />
+      {/* <SideBar pageWrapId={'header-container'} outerContainerId={'App'} /> */}
       <div id="header-container" className="header-container">
         <div>
           <a href="#header-container">
@@ -31,6 +31,7 @@ const Header = (): ReactElement => {
           </nav>
           <button className="button">Resume</button>
         </div>
+        <SideBar3 />
       </div>
     </header>
   )

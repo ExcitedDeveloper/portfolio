@@ -4,7 +4,7 @@ import Main from './components/Main'
 
 function App(): ReactElement {
   return (
-    <div id="App">
+    <div id="app">
       <Header />
       <Main />
     </div>
