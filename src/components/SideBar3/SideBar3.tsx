@@ -50,7 +50,9 @@ const SideBar3 = (): ReactElement => {
           </a>
         </li>
         <li className="sidebar-button">
-          <button className="button">Resume</button>
+          <a href="/resume.pdf" className="button">
+            Resume
+          </a>
         </li>
       </ul>
     </div>

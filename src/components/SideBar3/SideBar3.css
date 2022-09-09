@@ -82,6 +82,22 @@
   justify-content: center;
 }
 
+.button {
+  color: var(--highlight-color);
+  background-color: transparent;
+  border: 0.063rem solid var(--highlight-color);
+  border-radius: var(--border-radius);
+  font-size: var(--fz-sm);
+  font-family: var(--menu-font);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 1.125rem 3.125rem;
+  margin: 10% auto 0;
+  width: max-content;
+}
+
 #menu-toggle:checked + .menu-btn > span {
   transform: rotate(45deg);
 }
