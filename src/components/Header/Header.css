@@ -1,0 +1,38 @@
+header {
+  display: flex;
+}
+
+nav {
+  width: 100vw;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.header-menu {
+  display: none;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: var(--header-spacing);
+}
+
+.header-logo {
+  height: 2em;
+  width: 2em;
+}
+
+.header-filler {
+  flex: 1;
+}
+
+/* Breakpoints */
+@media screen and (min-width: 48rem) {
+  .header-menu {
+    display: flex;
+    align-items: center;
+  }
+}

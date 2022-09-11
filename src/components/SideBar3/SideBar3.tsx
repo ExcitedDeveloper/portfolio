@@ -20,7 +20,11 @@ const SideBar3 = (): ReactElement => {
         type="checkbox"
         onChange={handleHamburgerOnChange}
       />
-      <label className="menu-btn" htmlFor="menu-toggle">
+      <label
+        className="menu-btn"
+        htmlFor="menu-toggle"
+        aria-label="menu-toggle"
+      >
         <span></span>
       </label>
 
