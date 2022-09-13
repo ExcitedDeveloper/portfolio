@@ -80,9 +80,6 @@
 .sidebar-button {
   display: flex;
   justify-content: center;
-}
-
-.button {
   color: var(--highlight-color);
   background-color: transparent;
   border: 0.063rem solid var(--highlight-color);

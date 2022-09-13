@@ -1,13 +1,11 @@
-header {
+.header-main {
   display: flex;
-}
-
-nav {
-  width: 100vw;
-}
-
-.nav-list {
-  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 2.5rem;
+  height: var(--nav-height);
 }
 
 .header-menu {
@@ -17,7 +15,9 @@ nav {
 .header-container {
   display: flex;
   flex-direction: row;
-  padding-top: var(--header-spacing);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .header-logo {
@@ -25,8 +25,25 @@ nav {
   width: 2em;
 }
 
-.header-filler {
-  flex: 1;
+.header-button {
+  color: var(--highlight-color);
+  background-color: transparent;
+  border: 0.063rem solid var(--highlight-color);
+  border-radius: var(--border-radius);
+  font-size: var(--fz-sm);
+  font-family: var(--menu-font);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0.75rem 1rem;
+  margin-left: 0.938rem;
+  width: max-content;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
 }
 
 /* Breakpoints */

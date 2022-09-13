@@ -8,6 +8,7 @@
   --menu-font: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
   --border-radius: 0.25rem;
   --fz-sm: 0.875rem;
+  --nav-height: 6.25rem;
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -47,7 +48,6 @@ html:focus-within {
 body {
   text-rendering: optimizespeed;
   line-height: 1.5;
-  padding: 0 var(--header-spacing);
 }
 
 /* A elements that don't have a class get default styles */
@@ -86,26 +86,6 @@ svg {
   height: 100vh;
 }
 
-/* Header */
-.header-menu {
-  display: none;
-}
-
-.header-container {
-  display: flex;
-  flex-direction: row;
-  padding-top: var(--header-spacing);
-}
-
-.header-logo {
-  height: 2em;
-  width: 2em;
-}
-
-.header-filler {
-  flex: 1;
-}
-
 /* Hamburger menu */
 .hamburger-menu {
   display: block;
@@ -113,6 +93,7 @@ svg {
 
 main {
   flex: 1;
+  padding: 0 6.25rem;
 }
 
 /* Misc */
@@ -125,9 +106,9 @@ main {
 
 /* Breakpoints */
 @media screen and (min-width: 48rem) {
-  .header-menu {
+  /* .header-menu {
     display: block;
-  }
+  } */
 
   .hamburger-menu {
     display: none;
