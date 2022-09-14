@@ -7,6 +7,8 @@
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --menu-font: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
   --border-radius: 0.25rem;
+  --fz-xxs: 0.75rem;
+  --fx-xs: 0.813rem;
   --fz-sm: 0.875rem;
   --nav-height: 6.25rem;
 }

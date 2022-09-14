@@ -46,6 +46,31 @@
   list-style: none;
 }
 
+.nav-list li {
+  margin: 0 0.313rem;
+  position: relative;
+  counter-increment: item 1;
+  font-size: var(--fz-xs);
+}
+
+.nav-list li a::before {
+  content: '0' counter(item) '.';
+  margin-right: 0.313rem;
+  color: var(--highlight-color);
+  font-size: var(--fz-xxs);
+  text-align: right;
+}
+
+.nav-list li a {
+  padding: 0.625rem;
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: var(--menu-text-color);
+  position: relative;
+  transition: var(--transition);
+}
+
 /* Breakpoints */
 @media screen and (min-width: 48rem) {
   .header-menu {
