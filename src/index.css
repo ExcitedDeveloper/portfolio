@@ -11,6 +11,9 @@
   --fx-xs: 0.813rem;
   --fz-sm: 0.875rem;
   --nav-height: 6.25rem;
+  --text-line-height: 1.056;
+  --nav-scroll-height: 4.375rem;
+  --navy-shadow: rgba(2 12 27 / 70%);
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -40,6 +43,7 @@ html,
 body {
   height: 100%;
   background-color: var(--primary-color);
+  line-height: var(--text-line-height);
 }
 
 html:focus-within {
@@ -95,7 +99,7 @@ svg {
 
 main {
   flex: 1;
-  padding: 0 6.25rem;
+  padding: 2rem 6.25rem 0;
 }
 
 /* Misc */

@@ -4,8 +4,20 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 2.5rem;
   height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  padding: 0 3.125rem;
+  background-color: rgba(10 25 47 / 85%);
+  transition: var(--transition);
+  filter: none !important;
+  pointer-events: auto !important;
+  user-select: auto !important;
+}
+
+.header-main.hide {
+  top: calc(var(--nav-height) * -1);
 }
 
 .header-menu {
@@ -69,6 +81,7 @@
   color: var(--menu-text-color);
   position: relative;
   transition: var(--transition);
+  line-height: var(--text-line-height);
 }
 
 /* Breakpoints */
