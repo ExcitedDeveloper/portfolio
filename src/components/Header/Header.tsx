@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import React, { ReactElement, useEffect } from 'react'
 import SideBar3 from '../SideBar3'
 import './Header.css'
@@ -16,7 +17,7 @@ const Header = (): ReactElement => {
     const doc = document.documentElement
     const w = window
 
-    let prevScroll = w.scrollY !== 0 ? w.scrollY : doc.scrollTop
+    let prevScroll = w.scrollY || doc.scrollTop
     let curScroll
     let direction = ScrollDirection.Initial
     let prevDirection = ScrollDirection.Initial
@@ -27,13 +28,13 @@ const Header = (): ReactElement => {
 
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     const checkScroll = function () {
-      curScroll = w.scrollY !== 0 ? w.scrollY : doc.scrollTop
+      curScroll = w.scrollY || doc.scrollTop
       if (curScroll > prevScroll) {
         // scrolled up
-        direction = ScrollDirection.Up
+        direction = ScrollDirection.Down
       } else if (curScroll < prevScroll) {
         // scrolled down
-        direction = ScrollDirection.Down
+        direction = ScrollDirection.Up
       }
 
       if (direction !== prevDirection) {
