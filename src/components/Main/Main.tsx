@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react'
 const Main = (): ReactElement => {
   return (
     <main>
-      <h1 style={{ color: 'white' }}>
+      <h1 id="main-content" style={{ color: 'white' }}>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
         possimus aperiam mollitia, expedita nemo quis fugit? Laborum earum
         corporis magni impedit explicabo autem culpa, omnis sit, commodi,
@@ -45,27 +45,27 @@ const Main = (): ReactElement => {
         dolorem dignissimos nostrum blanditiis, distinctio illo, error doloribus
         eligendi enim quis reiciendis molestiae nulla cum nam nisi optio. Omnis
         laborum quo iure, fugiat placeat enim. Aliquid quibusdam in temporibus
-        ea quod velit numquam quidem adipisci fugit illo error sapiente,
-        laudantium esse. Rem quo ab minima magnam natus saepe iste error debitis
-        aliquam aperiam sequi ipsa amet, facere delectus, illum sunt ut quam
-        odio, architecto sit placeat earum rerum provident. Facere odio
-        reiciendis provident distinctio minus eum, velit quibusdam modi
-        doloremque debitis! Quod aut vero odit ex sit velit ad in asperiores
-        expedita maiores similique sapiente, voluptas dolorem nemo eum non quia,
-        ipsa soluta neque! Provident repellendus cupiditate ducimus accusamus,
-        earum molestias minima illum quos ratione a magni, laudantium rerum
-        neque enim iusto, autem quibusdam natus. Dignissimos repellat harum sed
-        quo porro non voluptas nihil quisquam dicta ab fugit, a quidem
-        laudantium vero optio iste explicabo nesciunt perspiciatis maxime
-        aspernatur dolores eos! Sint fugiat id asperiores nostrum aspernatur
-        cumque natus fugit! Sapiente maiores cum aperiam modi quis distinctio
-        obcaecati praesentium dolor aut consequuntur, consequatur iste dolores
-        repellendus commodi eos unde quas asperiores est repellat? Nostrum,
-        corporis. Ut enim dignissimos fuga et atque? Nulla repellendus aperiam,
-        perferendis nobis amet veniam commodi tempore delectus harum quas
-        architecto? Consequuntur id sint autem repellendus doloribus rerum culpa
-        facilis vero ex harum quibusdam in iure delectus suscipit, animi ut
-        distinctio, est veritatis iste? Dolor possimus earum impedit quas
+        ea quod velit <a href="header-main">numquam</a> quidem adipisci fugit
+        illo error sapiente, laudantium esse. Rem quo ab minima magnam natus
+        saepe iste error debitis aliquam aperiam sequi ipsa amet, facere
+        delectus, illum sunt ut quam odio, architecto sit placeat earum rerum
+        provident. Facere odio reiciendis provident distinctio minus eum, velit
+        quibusdam modi doloremque debitis! Quod aut vero odit ex sit velit ad in
+        asperiores expedita maiores similique sapiente, voluptas dolorem nemo
+        eum non quia, ipsa soluta neque! Provident repellendus cupiditate
+        ducimus accusamus, earum molestias minima illum quos ratione a magni,
+        laudantium rerum neque enim iusto, autem quibusdam natus. Dignissimos
+        repellat harum sed quo porro non voluptas nihil quisquam dicta ab fugit,
+        a quidem laudantium vero optio iste explicabo nesciunt perspiciatis
+        maxime aspernatur dolores eos! Sint fugiat id asperiores nostrum
+        aspernatur cumque natus fugit! Sapiente maiores cum aperiam modi quis
+        distinctio obcaecati praesentium dolor aut consequuntur, consequatur
+        iste dolores repellendus commodi eos unde quas asperiores est repellat?
+        Nostrum, corporis. Ut enim dignissimos fuga et atque? Nulla repellendus
+        aperiam, perferendis nobis amet veniam commodi tempore delectus harum
+        quas architecto? Consequuntur id sint autem repellendus doloribus rerum
+        culpa facilis vero ex harum quibusdam in iure delectus suscipit, animi
+        ut distinctio, est veritatis iste? Dolor possimus earum impedit quas
         reprehenderit voluptatum magnam hic fuga molestiae assumenda. Assumenda
         dicta alias mollitia totam sint fuga recusandae, maiores eligendi
         tempora, nostrum labore eaque modi molestias, unde ut quasi esse quas

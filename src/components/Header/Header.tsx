@@ -64,6 +64,9 @@ const Header = (): ReactElement => {
 
   return (
     <header id="header-main" className="header-main">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <nav id="header-container" className="header-container">
         <div>
           <a href="#header-container">

@@ -38,6 +38,14 @@ ol[role='list'] {
   list-style: none;
 }
 
+/* TODO : Delete */
+
+/* The following is for skip link debugging */
+
+/* :not(.skip-link):focus {
+  outline: 5px solid red;
+} */
+
 /* Set core root defaults */
 html,
 body {
@@ -108,6 +116,26 @@ main {
   transition: var(--transition);
   pointer-events: none;
   user-select: none;
+}
+
+/* Link to youtube video about how to implement skip-link */
+
+/* https://www.youtube.com/watch?v=VUR0I5mqq7I */
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem;
+  translate: 0 -100%;
+  transition: translate 150ms ease-in-out;
+}
+
+.skip-link:focus {
+  translate: 0;
 }
 
 /* Breakpoints */
