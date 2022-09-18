@@ -24,9 +24,8 @@
 }
 
 .menu-btn {
-  position: fixed;
-  top: 2.5rem;
-  right: 2rem;
+  display: block;
+  position: relative;
   width: 1.625rem;
   height: 1.625rem;
   cursor: pointer;
@@ -93,6 +92,11 @@
   padding: 1.125rem 3.125rem;
   margin: 10% auto 0;
   width: max-content;
+  font-weight: bold;
+}
+
+.sidebar-button a {
+  color: var(--highlight-color);
 }
 
 #menu-toggle:checked + .menu-btn > span {

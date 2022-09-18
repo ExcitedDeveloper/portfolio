@@ -9,11 +9,11 @@
   top: 0;
   z-index: 11;
   padding: 0 3.125rem;
-  background-color: rgba(10 25 47 / 85%);
+  background-color: rgba(10 25 47 / 95%);
   transition: var(--transition);
-  filter: none !important;
-  pointer-events: auto !important;
-  user-select: auto !important;
+  filter: none;
+  pointer-events: auto;
+  user-select: auto;
 }
 
 .header-main.hide {
