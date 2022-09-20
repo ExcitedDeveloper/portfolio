@@ -19,6 +19,11 @@
   transition-duration: 0.25s;
 }
 
+.menu-box li {
+  margin: 0 auto 1.25rem;
+  font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
+}
+
 #menu-toggle {
   opacity: 0;
 }
@@ -56,7 +61,7 @@
 .menu-item-num {
   text-align: center;
   color: var(--highlight-color);
-  font-size: 0.875rem;
+  font-size: var(--fz-sm);
   font-family: var(--menu-font);
 }
 
@@ -64,7 +69,7 @@
   display: block;
   padding: 0 1.5rem 0.75rem;
   font-family: var(--menu-font);
-  font-size: 1.058rem;
+  font-size: var(--fz-lg);
   font-weight: 600;
   text-decoration: none;
   transition-duration: 0.25s;
@@ -76,27 +81,18 @@
   background-color: #cfd8dc;
 }
 
-.sidebar-button {
+.sidebar-button-li {
   display: flex;
   justify-content: center;
-  color: var(--highlight-color);
-  background-color: transparent;
-  border: 0.063rem solid var(--highlight-color);
-  border-radius: var(--border-radius);
-  font-size: var(--fz-sm);
-  font-family: var(--menu-font);
-  line-height: 1;
-  text-decoration: none;
-  cursor: pointer;
-  transition: var(--transition);
-  padding: 1.125rem 3.125rem;
-  margin: 10% auto 0;
-  width: max-content;
-  font-weight: bold;
 }
 
-.sidebar-button a {
-  color: var(--highlight-color);
+.sidebar-button-container.sidebar-button-container {
+  margin: 10% auto 0;
+  padding: 1.125rem 3.125rem;
+}
+
+.sidebar-button.sidebar-button {
+  font-weight: bold;
 }
 
 #menu-toggle:checked + .menu-btn > span {

@@ -1,0 +1,21 @@
+.button-container {
+  border: 0.063rem solid var(--highlight-color);
+  border-radius: var(--border-radius);
+}
+
+.button {
+  color: var(--highlight-color);
+  background-color: transparent;
+  font-size: var(--fz-sm);
+  font-family: var(--menu-font);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0.75rem 1rem;
+  width: max-content;
+}
+
+.button:hover {
+  opacity: 0.5;
+}

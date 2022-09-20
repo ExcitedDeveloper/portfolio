@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import './SideBar3.css'
+import Button from '../Button'
 
 const SideBar3 = (): ReactElement => {
   const handleHamburgerOnChange = (
@@ -53,8 +54,16 @@ const SideBar3 = (): ReactElement => {
             Contact
           </a>
         </li>
-        <li className="sidebar-button">
-          <a href="/resume.pdf">Resume</a>
+        <li className="sidebar-button-li">
+          {/* <a className="button sidebar-button" href="/resume.pdf">
+            Resume
+          </a> */}
+          <Button
+            title="Resume"
+            href="/resume.pdf"
+            containerClass="sidebar-button-container"
+            buttonClass="sidebar-button"
+          />
         </li>
       </ul>
     </div>

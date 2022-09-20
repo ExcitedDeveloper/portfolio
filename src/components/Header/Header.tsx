@@ -2,6 +2,7 @@
 import React, { ReactElement, useEffect } from 'react'
 import SideBar3 from '../SideBar3'
 import './Header.css'
+import Button from '../Button'
 
 const NAV_HEIGHT = 100 // Nav height in px
 
@@ -88,7 +89,12 @@ const Header = (): ReactElement => {
               <a href="#header-container">Contact</a>
             </li>
           </ol>
-          <button className="header-button">Resume</button>
+          <Button
+            title="Resume"
+            href="/resume.pdf"
+            containerClass="header-button-container"
+            buttonClass="header-button"
+          />
         </div>
         <SideBar3 />
       </nav>

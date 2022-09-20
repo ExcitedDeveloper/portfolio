@@ -10,6 +10,7 @@
   --fz-xxs: 0.75rem;
   --fx-xs: 0.813rem;
   --fz-sm: 0.875rem;
+  --fz-lg: 1.125rem;
   --nav-height: 6.25rem;
   --text-line-height: 1.056;
   --nav-scroll-height: 4.375rem;
@@ -140,10 +141,6 @@ main {
 
 /* Breakpoints */
 @media screen and (min-width: 48rem) {
-  /* .header-menu {
-    display: block;
-  } */
-
   .hamburger-menu {
     display: none;
   }
