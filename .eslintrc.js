@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     quotes: ['error', 'single'],
     'react/react-in-jsx-scope': 'off',
-    '@typescript-eslint/space-before-function-paren': 'off'
+    '@typescript-eslint/space-before-function-paren': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off'
   }
 }

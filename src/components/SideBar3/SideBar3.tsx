@@ -1,18 +1,42 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useEffect } from 'react'
 import './SideBar3.css'
 import Button from '../Button'
+import useWindowSize, { Size } from '../../hooks/useWindowSize'
+import { BIG_SCREEN_WIDTH } from '../../utils/constants'
+
+const handleHamburgerOnChange = (
+  e: React.ChangeEvent<HTMLInputElement>
+): void => {
+  const mainElem = document.getElementsByTagName('main')[0]
+
+  if (e.target.checked) {
+    mainElem.classList.add('blur')
+  } else {
+    mainElem.classList.remove('blur')
+  }
+}
 
 const SideBar3 = (): ReactElement => {
-  const handleHamburgerOnChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ): void => {
+  const windowSize: Size = useWindowSize()
+
+  // Handle the case where the sidebar is open and the
+  // user resizes the browser.  Remove the blur and
+  // check the menu toggle to close the sidebar
+  useEffect(() => {
     const mainElem = document.getElementsByTagName('main')[0]
-    if (e.target.checked) {
-      mainElem.classList.add('blur')
-    } else {
+
+    if (windowSize.width !== undefined && windowSize.width > BIG_SCREEN_WIDTH) {
       mainElem.classList.remove('blur')
     }
-  }
+
+    const menuToggle = document.getElementById(
+      'menu-toggle'
+    ) as HTMLInputElement
+
+    if (menuToggle !== null) {
+      menuToggle.checked = false
+    }
+  }, [windowSize.width])
 
   return (
     <div className="hamburger-menu">
