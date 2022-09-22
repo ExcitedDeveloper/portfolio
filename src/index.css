@@ -15,6 +15,7 @@
   --text-line-height: 1.056;
   --nav-scroll-height: 4.375rem;
   --navy-shadow: rgba(2 12 27 / 70%);
+  --light-slate: #a8b2d1;
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -63,6 +64,15 @@ html:focus-within {
 body {
   text-rendering: optimizespeed;
   line-height: 1.5;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  transition: var(--transition);
 }
 
 /* A elements that don't have a class get default styles */
