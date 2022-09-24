@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import './SocialMedia.css'
-import GitHubSVGFile from './GitHubSVGFile'
+// import GitHubSVGFile from './GitHubSVGFile'
 
 const SocialMedia = (): ReactElement => {
   return (
