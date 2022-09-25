@@ -1,5 +1,5 @@
 import React, { ReactElement, useEffect } from 'react'
-import './SideBar3.css'
+import './SideBar.css'
 import Button from '../Button'
 import useWindowSize, { Size } from '../../hooks/useWindowSize'
 import { BIG_SCREEN_WIDTH } from '../../utils/constants'

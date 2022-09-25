@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import React, { ReactElement, useEffect } from 'react'
-import SideBar3 from '../SideBar3'
+import SideBar from '../SideBar'
 import './Header.css'
 import Button from '../Button'
 
@@ -96,7 +96,7 @@ const Header = (): ReactElement => {
             buttonClass="header-button"
           />
         </div>
-        <SideBar3 />
+        <SideBar />
       </nav>
     </header>
   )
