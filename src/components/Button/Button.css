@@ -7,7 +7,7 @@
   color: var(--highlight-color);
   background-color: transparent;
   font-size: var(--fz-sm);
-  font-family: var(--menu-font);
+  font-family: var(--font-mono);
   line-height: 1;
   text-decoration: none;
   cursor: pointer;

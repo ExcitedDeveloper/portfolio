@@ -1,0 +1,49 @@
+.email-container {
+  width: 2.5rem;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 2.5rem;
+  z-index: 10;
+  color: var(--light-slate);
+}
+
+.email-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.email-wrapper a {
+  margin: 1.25rem auto;
+  padding: 0.625rem;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: var(--fz-lg);
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+}
+
+.email-wrapper::after {
+  content: '';
+  display: block;
+  width: 0.063rem;
+  height: 6rem;
+  margin: 0 auto;
+  background-color: var(--light-slate);
+}
+
+/* Breakpoints */
+@media screen and (max-width: 48rem) {
+  .email-container {
+    display: none;
+  }
+}
+
+@media (max-width: 67.5rem) {
+  .email-container {
+    left: auto;
+    right: 1.25rem;
+  }
+}

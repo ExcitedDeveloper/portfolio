@@ -62,13 +62,13 @@
   text-align: center;
   color: var(--highlight-color);
   font-size: var(--fz-sm);
-  font-family: var(--menu-font);
+  font-family: var(--font-mono);
 }
 
 .menu-item {
   display: block;
   padding: 0 1.5rem 0.75rem;
-  font-family: var(--menu-font);
+  font-family: var(--font-mono);
   font-size: var(--fz-lg);
   font-weight: 600;
   text-decoration: none;
