@@ -17,6 +17,15 @@
   list-style: none;
 }
 
+.social-media-list::after {
+  content: '';
+  display: block;
+  width: 0.063rem;
+  height: 13rem;
+  margin: 0 auto;
+  background-color: var(--light-slate);
+}
+
 .social-media-list li a {
   padding: 0.625rem;
 }
