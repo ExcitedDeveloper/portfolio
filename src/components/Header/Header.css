@@ -60,7 +60,7 @@
 .nav-list li a::before {
   content: '0' counter(item) '.';
   margin-right: 0.313rem;
-  color: var(--highlight-color);
+  color: var(--green);
   font-size: var(--fz-xxs);
   text-align: right;
 }

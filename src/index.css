@@ -1,21 +1,26 @@
 :root {
   --primary-color: #0a192f;
   --sidebar-color: #112240;
-  --highlight-color: rgb(100 255 218);
+  --green: rgb(100 255 218);
   --menu-text-color: #bbc5e5;
   --header-spacing: 2rem;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+    system-ui, sans-serif;
   --border-radius: 0.25rem;
   --fz-xxs: 0.75rem;
   --fx-xs: 0.813rem;
   --fz-sm: 0.875rem;
+  --fz-md: 1rem;
   --fz-lg: 1.125rem;
   --nav-height: 6.25rem;
   --text-line-height: 1.056;
   --nav-scroll-height: 4.375rem;
   --navy-shadow: rgba(2 12 27 / 70%);
   --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --slate: #8892b0;
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -64,6 +69,7 @@ html:focus-within {
 body {
   text-rendering: optimizespeed;
   line-height: 1.5;
+  font-family: var(--font-sans);
 }
 
 a {
@@ -92,6 +98,18 @@ svg {
   vertical-align: middle;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.625rem;
+  font-weight: 600;
+  color: var(--lightest-slate);
+  line-height: 1.1;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -118,11 +136,6 @@ svg {
 /* Hamburger menu */
 .hamburger-menu {
   display: block;
-}
-
-main {
-  flex: 1;
-  padding: 2rem 6.25rem 0;
 }
 
 /* Misc */

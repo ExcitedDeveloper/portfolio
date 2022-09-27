@@ -40,7 +40,7 @@ svg.feather {
 
 svg:hover {
   transform: translate(0, -0.5rem);
-  color: var(--highlight-color);
+  color: var(--green);
 }
 
 .social-media-list li a svg {

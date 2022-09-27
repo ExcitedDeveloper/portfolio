@@ -1,0 +1,67 @@
+main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100rem;
+
+  /* min-height: 100vh; TODO: Uncomment */
+  padding: 12.5rem 9.375rem;
+}
+
+.main-content {
+  counter-reset: section 0;
+}
+
+main.fill-height {
+  padding: 0 9.375rem;
+}
+
+.main-bio {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0;
+}
+
+section {
+  margin: 0 auto;
+  padding: 6.25rem 0;
+  max-width: 62.5rem;
+}
+
+.main-bio h1 {
+  margin: 0 0 1.875rem 0.25rem;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+  font-weight: 400;
+}
+
+.main-bio h3 {
+  margin-top: 0.625rem;
+  color: var(--slate);
+  line-height: 0.9;
+}
+
+.big-heading {
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
+/* Breakpoints */
+@media screen and (max-width: 48rem) {
+  main.fill-height {
+    padding: 0 3.125rem;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 67.5rem) {
+  main.fill-height {
+    padding: 0 6.25rem;
+  }
+}

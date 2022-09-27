@@ -60,7 +60,7 @@
 
 .menu-item-num {
   text-align: center;
-  color: var(--highlight-color);
+  color: var(--green);
   font-size: var(--fz-sm);
   font-family: var(--font-mono);
 }
