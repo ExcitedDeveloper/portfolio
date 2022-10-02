@@ -11,9 +11,12 @@
   --border-radius: 0.25rem;
   --fz-xxs: 0.75rem;
   --fx-xs: 0.813rem;
+  --fz-xs: 0.813rem;
   --fz-sm: 0.875rem;
-  --fz-md: 1rem;
+  --fz-md: 1.1rem;
   --fz-lg: 1.125rem;
+  --fz-xl: 1.375rem;
+  --fz-heading: 2rem;
   --nav-height: 6.25rem;
   --text-line-height: 1.056;
   --nav-scroll-height: 4.375rem;
@@ -70,6 +73,7 @@ body {
   text-rendering: optimizespeed;
   line-height: 1.5;
   font-family: var(--font-sans);
+  color: rgb(136 146 176);
 }
 
 a {
@@ -108,6 +112,47 @@ h6 {
   font-weight: 600;
   color: var(--lightest-slate);
   line-height: 1.1;
+}
+
+section {
+  margin: 0 auto;
+  padding: 6.25rem 0;
+  max-width: 62.5rem;
+}
+
+.numbered-heading {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0.625rem 0 2.5rem;
+  width: 100%;
+  font-size: clamp(1.625rem, 5vw, var(--fz-heading));
+  white-space: nowrap;
+}
+
+.numbered-heading::before {
+  position: relative;
+
+  /* bottom: 0.25rem; */
+  counter-increment: section 1;
+  content: '0' counter(section) '.';
+  margin-top: 0.25rem;
+  margin-right: 0.625rem;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+  font-weight: 400;
+}
+
+.numbered-heading::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: -0.313rem;
+  width: 18.75rem;
+  height: 0.063rem;
+  margin-left: 1.25rem;
+  background-color: var(--lightest-navy);
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -170,5 +215,11 @@ h6 {
 @media screen and (min-width: 48rem) {
   .hamburger-menu {
     display: none;
+  }
+}
+
+@media (max-width: 67.5rem) {
+  .numbered-heading::after {
+    width: 12.5rem;
   }
 }

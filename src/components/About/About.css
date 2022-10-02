@@ -1,0 +1,41 @@
+.about-section {
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
+    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  max-width: 56.25rem;
+}
+
+.about-section .inner {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3.125rem;
+}
+
+.about-skills ul.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(8.75rem, 12.5rem));
+  gap: 0 0.625rem;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.about-skills ul.skills-list li {
+  position: relative;
+  margin-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+}
+
+.about-skills ul.skills-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-size: var(--fz-sm);
+  line-height: 0.75rem;
+}

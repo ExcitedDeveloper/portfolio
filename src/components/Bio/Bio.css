@@ -1,0 +1,27 @@
+.main-bio {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.main-bio h1 {
+  margin: 0 0 1.875rem 0.25rem;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+  font-weight: 400;
+}
+
+.main-bio h3 {
+  margin-top: 0.625rem;
+  color: var(--slate);
+  line-height: 0.9;
+}
+
+.main-bio p {
+  margin: 1.25rem 0 0;
+  max-width: 33.75rem;
+}

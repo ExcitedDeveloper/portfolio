@@ -15,38 +15,37 @@ main.fill-height {
   padding: 0 9.375rem;
 }
 
-.main-bio {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 0;
-}
-
 section {
   margin: 0 auto;
   padding: 6.25rem 0;
   max-width: 62.5rem;
 }
 
-.main-bio h1 {
-  margin: 0 0 1.875rem 0.25rem;
-  color: var(--green);
-  font-family: var(--font-mono);
-  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
-  font-weight: 400;
-}
-
-.main-bio h3 {
-  margin-top: 0.625rem;
-  color: var(--slate);
-  line-height: 0.9;
-}
-
 .big-heading {
   margin: 0;
   font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
+p {
+  margin: 0 0 0.938rem;
+  color: var(--slate);
+}
+
+p a.company-link {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.063rem;
+  position: relative;
+  bottom: 0.37em;
+  color: var(--green);
+  transition: var(--transition);
+  opacity: 0.5;
+}
+
+::selection {
+  background-color: var(--lightest-navy);
+  color: var(--lightest-slate);
 }
 
 /* Breakpoints */
