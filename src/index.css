@@ -21,6 +21,7 @@
   --text-line-height: 1.056;
   --nav-scroll-height: 4.375rem;
   --navy-shadow: rgba(2 12 27 / 70%);
+  --lightest-navy: rgb(35 53 84);
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --slate: #8892b0;
@@ -215,6 +216,10 @@ section {
 @media screen and (min-width: 48rem) {
   .hamburger-menu {
     display: none;
+  }
+
+  .numbered-heading::after {
+    width: 100%;
   }
 }
 
