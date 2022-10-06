@@ -77,7 +77,7 @@ const Header = (): ReactElement => {
         <div className="header-menu">
           <ol aria-label="Primary" className="nav-list">
             <li>
-              <a href="#header-container">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
               <a href="#header-container">Experience</a>

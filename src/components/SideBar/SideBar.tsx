@@ -56,7 +56,7 @@ const SideBar3 = (): ReactElement => {
       <ul className="menu-box">
         <li>
           <div className="menu-item-num">01.</div>
-          <a className="menu-item" href="#header-container">
+          <a className="menu-item" href="#about">
             About
           </a>
         </li>

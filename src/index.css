@@ -63,6 +63,7 @@ body {
   height: 100%;
   background-color: var(--primary-color);
   line-height: var(--text-line-height);
+  scroll-behavior: smooth;
 }
 
 html:focus-within {
