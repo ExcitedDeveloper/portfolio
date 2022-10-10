@@ -25,3 +25,9 @@
   margin: 1.25rem 0 0;
   max-width: 33.75rem;
 }
+
+@media (max-width: 30rem) {
+  .main-bio {
+    min-height: 70vh;
+  }
+}

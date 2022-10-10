@@ -49,9 +49,16 @@ p a.company-link {
 }
 
 /* Breakpoints */
+
+@media (max-width: 67.5rem) {
+  main.fill-height {
+    padding: 0 6.25rem;
+  }
+}
+
 @media screen and (max-width: 48rem) {
   main.fill-height {
-    padding: 0 3.125rem;
+    padding: 0 3.125rem 4rem;
   }
 
   section {
@@ -59,8 +66,8 @@ p a.company-link {
   }
 }
 
-@media (max-width: 67.5rem) {
+@media (max-width: 30rem) {
   main.fill-height {
-    padding: 0 6.25rem;
+    padding: 0 2.25rem 4rem;
   }
 }
