@@ -16,6 +16,7 @@
   --fz-md: 1.1rem;
   --fz-lg: 1.125rem;
   --fz-xl: 1.375rem;
+  --fz-xxl: 1.375rem;
   --fz-heading: 2rem;
   --nav-height: 6.25rem;
   --text-line-height: 1.056;
@@ -25,6 +26,7 @@
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --slate: #8892b0;
+  --tab-height: 2.625rem;
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -155,6 +157,12 @@ section {
   height: 0.063rem;
   margin-left: 1.25rem;
   background-color: var(--lightest-navy);
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

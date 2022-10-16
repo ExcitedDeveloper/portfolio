@@ -80,13 +80,13 @@ const Header = (): ReactElement => {
               <a href="#about">About</a>
             </li>
             <li>
-              <a href="#header-container">Experience</a>
+              <a href="#jobs">Experience</a>
             </li>
             <li>
-              <a href="#header-container">Work</a>
+              <a href="#projects">Work</a>
             </li>
             <li>
-              <a href="#header-container">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ol>
           <Button

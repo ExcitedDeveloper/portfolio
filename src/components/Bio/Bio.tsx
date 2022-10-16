@@ -17,8 +17,8 @@ const Bio = (): ReactElement => {
       </div>
       <div style={{ transitionDelay: '400ms' }}>
         <p className="">
-          I’m a software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences.
+          I’m a software engineer specializing in building responsive and
+          accessible digital experiences.
         </p>
       </div>
     </section>

@@ -62,26 +62,23 @@ const SideBar3 = (): ReactElement => {
         </li>
         <li>
           <div className="menu-item-num">02.</div>
-          <a className="menu-item" href="#header-container">
+          <a className="menu-item" href="#jobs">
             Experience
           </a>
         </li>
         <li>
           <div className="menu-item-num">03.</div>
-          <a className="menu-item" href="#header-container">
+          <a className="menu-item" href="#projects">
             Work
           </a>
         </li>
         <li>
           <div className="menu-item-num">04.</div>
-          <a className="menu-item" href="#header-container">
+          <a className="menu-item" href="#contact">
             Contact
           </a>
         </li>
         <li className="sidebar-button-li">
-          {/* <a className="button sidebar-button" href="/resume.pdf">
-            Resume
-          </a> */}
           <Button
             title="Resume"
             href="/resume.pdf"
