@@ -22,6 +22,7 @@
   --text-line-height: 1.056;
   --nav-scroll-height: 4.375rem;
   --navy-shadow: rgba(2 12 27 / 70%);
+  --light-navy: #112240;
   --lightest-navy: rgb(35 53 84);
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
@@ -235,5 +236,17 @@ button {
 @media (max-width: 67.5rem) {
   .numbered-heading::after {
     width: 12.5rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  section {
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 30rem) {
+  section {
+    padding: 3.75rem 0;
   }
 }

@@ -3,6 +3,7 @@ import Bio from '../Bio'
 import About from '../About'
 import Jobs from '../Jobs'
 import './Main.css'
+import Projects from '../Projects'
 
 const Main = (): ReactElement => {
   return (
@@ -11,6 +12,7 @@ const Main = (): ReactElement => {
         <Bio />
         <About />
         <Jobs />
+        <Projects />
       </main>
     </div>
   )

@@ -1,0 +1,116 @@
+.projects-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-portfolio {
+  /* visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; */
+
+  position: relative;
+  display: grid;
+  gap: 0.625rem;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+.project-portfolio:not(:last-of-type) {
+  margin-bottom: 6.25rem;
+}
+
+.project-portfolio .project-content {
+  position: relative;
+  grid-area: 1 / 1 / -1 / 7;
+}
+
+.project-portfolio:nth-of-type(2n + 1) .project-content {
+  grid-column: 7 / -1;
+  text-align: right;
+}
+
+.project-portfolio .project-overline {
+  margin: 0.625rem 0;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  font-weight: 400;
+}
+
+.project-portfolio .project-title {
+  color: var(--light-slate);
+  font-size: clamp(1.5rem, 5vw, 1.75rem);
+}
+
+.projects-list a {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-list .project-description {
+  box-shadow: 0 0.625rem 1.875rem -0.938rem var(--navy-shadow);
+  transition: var(--transition);
+  position: relative;
+  z-index: 2;
+  padding: 1.563rem;
+  border-radius: var(--border-radius);
+  background-color: var(--light-navy);
+  color: var(--light-slate);
+  font-size: var(--fz-lg);
+}
+
+@media (min-width: 48rem) {
+  .project-portfolio .project-title {
+    margin: 0 0 1.25rem;
+  }
+}
+
+@media (max-width: 67.5rem) {
+  .project-portfolio .project-content {
+    grid-column: 1 / 9;
+  }
+
+  .project-portfolio:nth-of-type(2n + 1) .project-content {
+    grid-column: 5 / -1;
+  }
+}
+
+@media (max-width: 48rem) {
+  .project-portfolio {
+    box-shadow: 0 0.625rem 1.875rem -0.938rem var(--navy-shadow);
+    transition: var(--transition);
+  }
+
+  .project-portfolio .project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    grid-column: 1 / -1;
+    padding: 2.5rem 2.5rem 1.875rem;
+    z-index: 5;
+  }
+
+  .project-portfolio:not(:last-of-type) {
+    margin-bottom: 4.375rem;
+  }
+
+  .project-portfolio:nth-of-type(2n + 1) .project-content {
+    grid-column: 1 / -1;
+    padding: 2.5rem 2.5rem 1.875rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 30rem) {
+  .project-portfolio:not(:last-of-type) {
+    margin-bottom: 1.875rem;
+  }
+
+  .project-portfolio:nth-of-type(2n + 1) .project-content {
+    padding: 1.563rem 1.563rem 1.25rem;
+  }
+}

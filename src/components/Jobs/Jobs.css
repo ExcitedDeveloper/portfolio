@@ -1,3 +1,7 @@
+:root {
+  --selected-tab: 0;
+}
+
 .jobs-section {
   max-width: 43.75rem;
 }
@@ -43,8 +47,27 @@
   height: var(--tab-height);
   border-radius: var(--border-radius);
   background: var(--green);
-  transform: translateY(calc(0 * var(--tab-height)));
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+
+.jobs-tab-0 {
+  transform: translateY(calc(0 * var(--tab-height)));
+}
+
+.jobs-tab-1 {
+  transform: translateY(calc(1 * var(--tab-height)));
+}
+
+.jobs-tab-2 {
+  transform: translateY(calc(2 * var(--tab-height)));
+}
+
+.jobs-tab-3 {
+  transform: translateY(calc(3 * var(--tab-height)));
+}
+
+.jobs-tab-4 {
+  transform: translateY(calc(4 * var(--tab-height)));
 }
 
 .jobs-tab-panels {

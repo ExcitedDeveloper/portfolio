@@ -2,23 +2,64 @@ import React, { ReactElement, useEffect } from 'react'
 import './Jobs.css'
 
 const handleJobTabClick = (e: Event): void => {
-  //
+  const buttonElement = e.target as HTMLButtonElement
+  let id
+  if (buttonElement?.id) {
+    id = buttonElement.id
+  } else if (buttonElement?.parentElement?.id) {
+    id = buttonElement.parentElement.id
+  }
+
+  if (!id) {
+    console.error('Jobs handleJobTabClick: id is null')
+    return
+  }
+
+  const parts = id.split('-')
+
+  if (!parts || parts.length < 2) {
+    console.error('Jobs handleJobTabClick: id is not formatted correctly')
+    return
+  }
+
+  const tabNum = parts[1]
+
+  document
+    .querySelectorAll<HTMLElement>('[role="tabpanel"]')
+    .forEach((element) => {
+      if (element.id === `panel-${tabNum}`) {
+        element.style.display = 'block'
+      } else {
+        element.style.display = 'none'
+      }
+    })
+
+  const tabs = document.querySelectorAll('[role="tab"]')
+
+  const numOfTabs = Array.from(tabs).length
+
+  const selectedTab = document.getElementsByClassName('jobs-selected-tab')[0]
+
+  if (selectedTab) {
+    for (let i = 0; i < numOfTabs; i++) {
+      selectedTab.classList.remove(`jobs-tab-${i}`)
+    }
+
+    selectedTab.classList.add(`jobs-tab-${tabNum}`)
+  }
 }
 
 const Jobs = (): ReactElement => {
+  console.log('render Jobs')
   useEffect(() => {
-    ;[...document.getElementsByClassName('button[role=tab]')].forEach(
-      (element) => {
-        element.addEventListener('click', handleJobTabClick, true)
-      }
-    )
+    ;[...document.querySelectorAll('[role="tab"]')].forEach((element) => {
+      element.addEventListener('click', handleJobTabClick, true)
+    })
 
     return () => {
-      ;[...document.getElementsByClassName('button[role=tab]')].forEach(
-        (element) => {
-          element.removeEventListener('click', handleJobTabClick, true)
-        }
-      )
+      ;[...document.querySelectorAll('[role="tab"]')].forEach((element) => {
+        element.removeEventListener('click', handleJobTabClick, true)
+      })
     }
   }, [])
 
@@ -87,6 +128,7 @@ const Jobs = (): ReactElement => {
             aria-labelledby="tab-0"
             aria-hidden="false"
             className="jobs-tab-panel"
+            style={{ display: 'block' }}
           >
             <h3>
               <span>Front-End Developer</span>
@@ -110,6 +152,7 @@ const Jobs = (): ReactElement => {
             aria-labelledby="tab-1"
             aria-hidden="true"
             className="jobs-tab-panel"
+            style={{ display: 'none' }}
           >
             <h3>
               <span>Front-End Developer</span>
@@ -150,6 +193,7 @@ const Jobs = (): ReactElement => {
             aria-labelledby="tab-2"
             aria-hidden="true"
             className="jobs-tab-panel"
+            style={{ display: 'none' }}
           >
             <h3>
               <span>Full Stack Developer</span>
@@ -181,6 +225,7 @@ const Jobs = (): ReactElement => {
             aria-labelledby="tab-3"
             aria-hidden="true"
             className="jobs-tab-panel"
+            style={{ display: 'none' }}
           >
             <h3>
               <span>Full Stack Developer</span>
@@ -213,6 +258,7 @@ const Jobs = (): ReactElement => {
             aria-labelledby="tab-4"
             aria-hidden="true"
             className="jobs-tab-panel"
+            style={{ display: 'none' }}
           >
             <h3>
               <span>Senior Web Developer </span>
