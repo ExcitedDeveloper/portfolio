@@ -1,9 +1,12 @@
 import React, { ReactElement } from 'react'
 import GitHubIcon from '../SocialMedia/GitHubIcon'
 import LinkedInIcon from '../SocialMedia/LinkedInIcon'
+import useGitHubStats from '../../hooks/useGitHubStats'
 import './Footer.css'
 
 const Footer = (): ReactElement => {
+  const { stars, forks } = useGitHubStats()
+
   return (
     <footer className="footer">
       <div className="footer-social-links">
@@ -37,7 +40,7 @@ const Footer = (): ReactElement => {
                 <title>Star</title>
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
               </svg>
-              <span>5,445</span>
+              <span>{stars.toLocaleString('en-US')}</span>
             </span>
             <span>
               <svg
@@ -55,7 +58,7 @@ const Footer = (): ReactElement => {
                 <circle cx="6" cy="18" r="3"></circle>
                 <path d="M18 9a9 9 0 0 1-9 9"></path>
               </svg>
-              <span>2,532</span>
+              <span>{forks.toLocaleString('en-US')}</span>
             </span>
           </div>
         </a>
