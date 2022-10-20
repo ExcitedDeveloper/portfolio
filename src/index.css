@@ -2,6 +2,7 @@
   --primary-color: #0a192f;
   --sidebar-color: #112240;
   --green: rgb(100 255 218);
+  --white: #e6f1ff;
   --menu-text-color: #bbc5e5;
   --header-spacing: 2rem;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -105,6 +106,9 @@ svg {
 
 svg {
   vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  fill: currentcolor;
 }
 
 h1,
@@ -222,7 +226,47 @@ button {
   translate: 0;
 }
 
-/* Breakpoints */
+svg.feather {
+  fill: none;
+}
+
+img,
+svg,
+.image-wrapper {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.image-wrapper-constrained {
+  display: inline-block;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+img[alt=''],
+img:not([alt]) {
+  filter: blur(0.125rem);
+}
+
+.image-wrapper img {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+/******************** Breakpoints ********************/
 @media screen and (min-width: 48rem) {
   .hamburger-menu {
     display: none;
