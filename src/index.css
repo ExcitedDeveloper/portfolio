@@ -153,7 +153,7 @@ section {
   font-weight: 400;
 }
 
-.numbered-heading::after {
+.numbered-heading:not(.overline)::after {
   content: '';
   display: block;
   position: relative;
@@ -266,6 +266,13 @@ img:not([alt]) {
   object-fit: cover;
 }
 
+.overline {
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--fz-md);
+  font-weight: 400;
+}
+
 /******************** Breakpoints ********************/
 @media screen and (min-width: 48rem) {
   .hamburger-menu {
@@ -292,5 +299,10 @@ img:not([alt]) {
 @media (max-width: 30rem) {
   section {
     padding: 3.75rem 0;
+  }
+
+  .numbered-heading::before {
+    margin-bottom: 0.188rem;
+    margin-right: 0.313rem;
   }
 }

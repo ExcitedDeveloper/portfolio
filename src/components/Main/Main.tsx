@@ -4,6 +4,7 @@ import About from '../About'
 import Jobs from '../Jobs'
 import './Main.css'
 import Projects from '../Projects'
+import Contact from '../Contact'
 
 const Main = (): ReactElement => {
   return (
@@ -13,6 +14,7 @@ const Main = (): ReactElement => {
         <About />
         <Jobs />
         <Projects />
+        <Contact />
       </main>
     </div>
   )
