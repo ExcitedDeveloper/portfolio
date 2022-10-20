@@ -43,7 +43,10 @@ const Projects = (): ReactElement => {
                 </a>
               </h3>
               <div className="project-description">
-                <p>My portfolio website.</p>
+                <p>
+                  My portfolio website to provide access to projects I&apos;ve
+                  worked on and insight into my background.
+                </p>
               </div>
               <ul className="project-tech-list">
                 <li>React</li>
@@ -53,7 +56,7 @@ const Projects = (): ReactElement => {
               </ul>
               <div className="project-links">
                 <a
-                  href="https://https://github.com/ExcitedDeveloper/portfolio"
+                  href="https://github.com/ExcitedDeveloper/portfolio"
                   aria-label="GitHub Link"
                   rel="noopener noreferrer"
                   target="_blank"
