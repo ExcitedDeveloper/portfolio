@@ -1,0 +1,79 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  min-height: 9rem;
+  padding: 0.938rem;
+  text-align: center;
+}
+
+.footer-social-links {
+  display: none;
+}
+
+.footer-social-links ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-built-by a,
+.footer-designed-by a {
+  padding: 0.625rem;
+}
+
+.footer-social-links ul a {
+  padding: 0.625rem;
+}
+
+.footer-social-links ul a svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.footer-built-by,
+.footer-designed-by {
+  color: var(--light-slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: 1;
+}
+
+.footer-built-by:hover,
+.footer-designed-by:hover {
+  color: var(--green);
+}
+
+.footer-built-by .github-stats {
+  margin-top: 0.625rem;
+}
+
+.footer-built-by .github-stats svg {
+  display: inline-block;
+  margin-right: 0.313rem;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.footer-built-by .github-stats > span {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0.438rem;
+}
+
+/****************** Breakpoints ******************/
+
+@media (max-width: 48rem) {
+  .footer-social-links {
+    display: block;
+    width: 100%;
+    max-width: 16.875rem;
+    margin: 0 auto 0.625rem;
+    color: var(--light-slate);
+  }
+}

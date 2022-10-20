@@ -8,15 +8,13 @@ import Contact from '../Contact'
 
 const Main = (): ReactElement => {
   return (
-    <div>
-      <main id="main-content" className="main-content fill-height">
-        <Bio />
-        <About />
-        <Jobs />
-        <Projects />
-        <Contact />
-      </main>
-    </div>
+    <main id="main-content" className="main-content fill-height">
+      <Bio />
+      <About />
+      <Jobs />
+      <Projects />
+      <Contact />
+    </main>
   )
 }
 
