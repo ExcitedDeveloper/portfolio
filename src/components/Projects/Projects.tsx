@@ -107,10 +107,8 @@ const Projects = (): ReactElement => {
             <div className="image-wrapper image-wrapper-constrained img">
               <div style={{ maxWidth: '43.75rem', display: 'block' }}>
                 <img
-                  alt=""
-                  role="presentation"
-                  aria-hidden="true"
-                  src="Portfolio.png"
+                  alt="Portfolio"
+                  src="Portfolio.PNG"
                   style={{
                     maxWidth: '100%',
                     display: 'block',
