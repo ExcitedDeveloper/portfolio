@@ -1,4 +1,3 @@
-import { url } from 'inspector'
 import React, { ReactElement } from 'react'
 import useWindowSize, { Size } from '../../hooks/useWindowSize'
 import './Projects.css'
