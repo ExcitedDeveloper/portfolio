@@ -247,11 +247,6 @@ svg,
   overflow: hidden;
 }
 
-img[alt=''],
-img:not([alt]) {
-  filter: blur(0.125rem);
-}
-
 .image-wrapper img {
   bottom: 0;
   height: 100%;
