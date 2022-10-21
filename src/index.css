@@ -125,7 +125,7 @@ h6 {
 
 section {
   margin: 0 auto;
-  padding: 6.25rem 0;
+  padding: 6.25rem 0 0;
   max-width: 62.5rem;
 }
 
@@ -287,13 +287,13 @@ svg,
 
 @media (max-width: 48rem) {
   section {
-    padding: 5rem 0;
+    padding: 5rem 0 0;
   }
 }
 
 @media (max-width: 30rem) {
   section {
-    padding: 3.75rem 0;
+    padding: 3.75rem 0 0;
   }
 
   .numbered-heading::before {

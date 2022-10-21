@@ -116,12 +116,14 @@
 }
 
 @media (max-width: 30rem) {
-  .about-section {
-    margin-bottom: 4rem;
-  }
-
   .about-skills ul.skills-list {
     grid-template-columns: repeat(1, minmax(8.75rem, 12.5rem));
+  }
+}
+
+@media (max-width: 48rem) {
+  .about-section {
+    margin-bottom: 4rem;
   }
 }
 

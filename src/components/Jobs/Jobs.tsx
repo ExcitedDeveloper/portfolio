@@ -50,7 +50,6 @@ const handleJobTabClick = (e: Event): void => {
 }
 
 const Jobs = (): ReactElement => {
-  console.log('render Jobs')
   useEffect(() => {
     ;[...document.querySelectorAll('[role="tab"]')].forEach((element) => {
       element.addEventListener('click', handleJobTabClick, true)

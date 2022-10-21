@@ -2,8 +2,6 @@ main {
   margin: 0 auto;
   width: 100%;
   max-width: 100rem;
-
-  /* min-height: 100vh; TODO: Uncomment */
   padding: 12.5rem 9.375rem;
 }
 
@@ -17,7 +15,6 @@ main.fill-height {
 
 section {
   margin: 0 auto;
-  padding: 6.25rem 0;
   max-width: 62.5rem;
 }
 
@@ -59,10 +56,6 @@ p a.company-link {
 @media screen and (max-width: 48rem) {
   main.fill-height {
     padding: 0 3.125rem 4rem;
-  }
-
-  section {
-    padding: 0;
   }
 }
 

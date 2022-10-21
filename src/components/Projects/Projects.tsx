@@ -2,8 +2,6 @@ import React, { ReactElement } from 'react'
 import './Projects.css'
 
 const Projects = (): ReactElement => {
-  console.log('render Projects')
-
   return (
     <section id="projects">
       <h2
