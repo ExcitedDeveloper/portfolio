@@ -233,7 +233,7 @@
   .project-portfolio .project-image {
     grid-column: 1 / -1;
     height: 100%;
-    opacity: 0.25;
+    opacity: 0.15;
   }
 
   .project-portfolio:nth-of-type(2n + 1) .project-image {

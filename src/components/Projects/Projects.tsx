@@ -1,7 +1,11 @@
+import { url } from 'inspector'
 import React, { ReactElement } from 'react'
+import useWindowSize, { Size } from '../../hooks/useWindowSize'
 import './Projects.css'
 
 const Projects = (): ReactElement => {
+  const windowSize: Size = useWindowSize()
+
   return (
     <section id="projects">
       <h2
@@ -101,21 +105,35 @@ const Projects = (): ReactElement => {
               </div>
             </div>
           </div>
-          <div className="project-image">
-            <div className="image-wrapper image-wrapper-constrained img">
-              <div style={{ maxWidth: '43.75rem', display: 'block' }}>
-                <img
-                  alt="Portfolio"
-                  src="Portfolio.PNG"
-                  style={{
-                    maxWidth: '100%',
-                    display: 'block',
-                    position: 'static'
-                  }}
-                />
+          {(windowSize.width === undefined || windowSize.width >= 768) && (
+            <div className="project-image">
+              <div className="image-wrapper image-wrapper-constrained img">
+                <div style={{ maxWidth: '43.75rem', display: 'block' }}>
+                  <img
+                    alt="Portfolio"
+                    src="Portfolio.PNG"
+                    style={{
+                      maxWidth: '100%',
+                      display: 'block',
+                      position: 'static'
+                    }}
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          )}
+          {windowSize.width !== undefined && windowSize.width < 768 && (
+            <div
+              className="project-image"
+              style={{
+                backgroundImage: 'url("Portfolio.PNG")',
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                gridColumn: '1/-1'
+              }}
+            ></div>
+          )}
         </li>
       </ul>
     </section>
