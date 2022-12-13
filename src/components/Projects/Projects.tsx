@@ -202,7 +202,7 @@ const Projects = (): ReactElement => {
                 <div style={{ maxWidth: '43.75rem', display: 'block' }}>
                   <img
                     alt="Flashcards"
-                    src="Flashcards.PNG"
+                    src="Flashcards.png"
                     style={{
                       maxWidth: '100%',
                       display: 'block',
@@ -217,7 +217,7 @@ const Projects = (): ReactElement => {
             <div
               className="project-image"
               style={{
-                backgroundImage: 'url("Portfolio.PNG")',
+                backgroundImage: 'url("Flashcards.png")',
                 backgroundSize: 'contain',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
