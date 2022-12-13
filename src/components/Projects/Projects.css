@@ -150,6 +150,10 @@
   filter: grayscale(100%) contrast(1) brightness(90%);
 }
 
+.highlighted-text {
+  color: var(--green);
+}
+
 /****************** Breakpoints ******************/
 @media (min-width: 48rem) {
   .project-portfolio .project-title {
