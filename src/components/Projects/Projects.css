@@ -154,6 +154,11 @@
   color: var(--green);
 }
 
+.weather-external {
+  margin-top: -0.25rem;
+  margin-left: 1rem;
+}
+
 /****************** Breakpoints ******************/
 @media (min-width: 48rem) {
   .project-portfolio .project-title {
