@@ -93,7 +93,6 @@
   align-items: center;
   position: relative;
   margin-top: 0.625rem;
-  margin-left: 0.625rem;
   color: var(--lightest-slate);
 }
 
@@ -108,11 +107,16 @@
   z-index: 1;
 }
 
+.project-portfolio:nth-of-type(2n) .project-links a {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
 .project-portfolio:nth-of-type(2n + 1) .project-links a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.625rem;
+  padding: 0.625rem 0.625rem 0.625rem 0;
 }
 
 .project-portfolio .project-links a svg {
@@ -231,6 +235,10 @@
 
   .project-portfolio:nth-of-type(2n + 1) .project-tech-list li {
     margin: 0 0.625rem 0.313rem 0;
+  }
+
+  .project-portfolio:nth-of-type(2n) .project-links {
+    margin-left: 0;
   }
 
   .project-portfolio:nth-of-type(2n + 1) .project-links {
