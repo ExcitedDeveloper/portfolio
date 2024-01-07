@@ -193,7 +193,7 @@ const Projects = (): ReactElement => {
                   </svg>
                 </a>
                 <a
-                  href="https://codepen-pearl.vercel.app/"
+                  href="https://codepen.stevehunley.dev/"
                   aria-label="External Link"
                   className="external"
                   rel="noopener noreferrer"
