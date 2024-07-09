@@ -69,7 +69,7 @@ const Footer = (): ReactElement => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <div>Designed by Brittany Chiang</div>
+          <div>Design Inspired by Brittany Chiang</div>
         </a>
       </div>
     </footer>
