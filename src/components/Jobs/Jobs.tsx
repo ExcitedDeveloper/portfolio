@@ -75,7 +75,7 @@ const Jobs = (): ReactElement => {
             aria-controls="panel-0"
             className="jobs-tab"
           >
-            <span>Ceridian</span>
+            <span>Dayforce</span>
           </button>
           <button
             id="tab-1"
@@ -131,7 +131,7 @@ const Jobs = (): ReactElement => {
           >
             <h3>
               <span>Front-End Developer</span>
-              <span className="jobs-company">&nbsp;@&nbsp;Ceridian</span>
+              <span className="jobs-company">&nbsp;@&nbsp;Dayforce</span>
             </h3>
             <p className="jobs-range">March 2021 - Present</p>
             <div>
