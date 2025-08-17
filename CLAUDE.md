@@ -17,6 +17,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run format` - Format code with Prettier
 - `npx stylelint "src/**/*.css"` - Lint CSS files
 
+### Testing
+
+- `npm test` - Run Jest test suite
+- `npm run test:watch` - Run tests in watch mode for development
+- `npm run test:coverage` - Run tests with coverage reporting
+
 ### Pre-commit Hooks
 
 The project uses Husky with lint-staged for pre-commit hooks that automatically run:
@@ -31,8 +37,14 @@ This is a React TypeScript portfolio website built with **Vite**. The applicatio
 
 ```
 src/
-├── components/           # Reusable UI components
+├── __mocks__/           # Jest mock files
+│   └── fileMock.js      # Mock for static file imports
+├── components/          # Reusable UI components
 │   ├── About/           # About section with headshot and skills
+│   │   ├── *.tsx        # Component files
+│   │   ├── *.css        # Component styles
+│   │   ├── *.test.tsx   # Component tests
+│   │   └── index.ts     # Export barrel
 │   ├── Bio/             # Bio component
 │   ├── Button/          # Reusable button component
 │   ├── Contact/         # Contact form/section
@@ -47,16 +59,28 @@ src/
 │   ├── SideBar/         # Mobile navigation sidebar
 │   └── SocialMedia/     # Fixed social media links
 ├── data/                # Static data and configuration
-│   └── projects.ts      # Project portfolio data
+│   ├── projects.ts      # Project portfolio data
+│   └── projects.test.ts # Data tests
 ├── hooks/               # Custom React hooks
-│   ├── useGitHubStats.tsx  # GitHub API integration
-│   └── useWindowSize.tsx   # Responsive design hook
+│   ├── useGitHubStats.tsx     # GitHub API integration
+│   ├── useGitHubStats.test.tsx # Hook tests
+│   ├── useWindowSize.tsx      # Responsive design hook
+│   └── useWindowSize.test.tsx  # Hook tests
 ├── images/              # Image assets
 ├── types/               # TypeScript type definitions
-│   └── Project.ts       # Project interface definition
-└── utils/               # Shared utilities and constants
-    ├── constants.ts     # Application constants
-    └── reportAccessibility.ts  # Accessibility reporting
+│   ├── Project.ts       # Project interface definition
+│   └── Project.test.ts  # Type tests
+├── utils/               # Shared utilities and constants
+│   ├── constants.ts     # Application constants
+│   ├── constants.test.ts # Utility tests
+│   ├── reportAccessibility.ts      # Accessibility reporting
+│   └── reportAccessibility.test.ts # Accessibility tests
+├── App.tsx              # Main application component
+├── App.test.tsx         # App component tests
+├── index.tsx            # Application entry point
+├── index.css            # Global styles
+├── setupTests.js        # Jest test setup
+└── vite-env.d.ts        # Vite environment types
 ```
 
 ### Component Architecture
@@ -65,7 +89,16 @@ Each component follows a consistent structure:
 
 - `ComponentName.tsx` - Main component file
 - `ComponentName.css` - Component-specific styles
+- `ComponentName.test.tsx` - Jest unit tests with Testing Library
 - `index.ts` - Export barrel for clean imports
+
+### Testing Strategy
+
+- **Unit Tests**: Comprehensive Jest test suite for all components, hooks, utilities, and data
+- **Testing Library**: React Testing Library for component testing with accessibility focus
+- **Coverage**: Test coverage reporting available via `npm run test:coverage`
+- **Mocks**: File mocks for static assets and external dependencies
+- **Setup**: Custom Jest configuration with JSDOM environment for DOM testing
 
 #### Key Components
 
@@ -127,7 +160,12 @@ Each component follows a consistent structure:
 - Vite 5.0.0 for build tooling
 - TypeScript 5.0.0 for type checking
 - ESLint ecosystem for code quality
+- Jest 30.0.5 for unit testing with JSDOM environment
+- Testing Library ecosystem (@testing-library/react, @testing-library/jest-dom, @testing-library/user-event)
+- Babel presets for Jest transpilation
 - Accessibility testing with @axe-core/react
+- Husky and lint-staged for pre-commit hooks
+- Prettier and Stylelint for code formatting
 
 ### Asset Handling
 
@@ -135,3 +173,10 @@ Each component follows a consistent structure:
 - Image assets for projects and branding
 - SVG icons as React components
 - Static assets referenced with `/` prefix for proper routing
+
+### Configuration Files
+
+- **vite.config.ts**: Vite configuration with React plugin, port 3000, and build output to `/build`
+- **jest.config.js**: Jest testing configuration with JSDOM environment and TypeScript support
+- **tsconfig.json**: TypeScript configuration with strict mode and ES2020 target
+- **package.json**: Dependencies, scripts, and project metadata
