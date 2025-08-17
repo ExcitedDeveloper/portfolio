@@ -11,7 +11,7 @@ const AboutHeadshot = (): ReactElement => {
               alt=""
               role="presentation"
               aria-hidden="true"
-              src="Headshot.jpg"
+              src="/Headshot.jpg"
             />
           </div>
           <div aria-hidden="true" className="about-image-placeholder"></div>

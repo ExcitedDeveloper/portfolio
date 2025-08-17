@@ -1,6 +1,6 @@
 // https://larsmagnus.co/blog/how-to-test-for-accessibility-with-axe-core-in-next-js-and-react
 
-import type React from 'react'
+import * as React from 'react'
 
 export const reportAccessibility = async (
   App: typeof React,

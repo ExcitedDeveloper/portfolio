@@ -71,7 +71,7 @@ const Header = (): ReactElement => {
       <nav id="header-container" className="header-container">
         <div>
           <a href="#header-container">
-            <img src="SteveHunleyLogo.png" className="header-logo" alt="Home" />
+            <img src="/SteveHunleyLogo.png" className="header-logo" alt="Home" />
           </a>
         </div>
         <div className="header-menu">
