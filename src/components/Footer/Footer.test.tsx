@@ -100,7 +100,9 @@ describe('Footer', () => {
 
   it('should format numbers with locale string', () => {
     // Mock larger numbers to test formatting
-    const mockedUseGitHubStats = useGitHubStats as jest.MockedFunction<typeof useGitHubStats>
+    const mockedUseGitHubStats = useGitHubStats as jest.MockedFunction<
+      typeof useGitHubStats
+    >
     mockedUseGitHubStats.mockReturnValue({
       stars: 1234,
       forks: 567
