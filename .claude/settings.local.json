@@ -7,7 +7,9 @@
       "Bash(npm run build:*)",
       "Bash(npm run dev:*)",
       "Bash(npx vite:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(rm:*)",
+      "Bash(cp:*)"
     ],
     "deny": [],
     "ask": []

@@ -3,6 +3,7 @@ import React, { ReactElement, useEffect } from 'react'
 import SideBar from '../SideBar'
 import './Header.css'
 import Button from '../Button'
+import logo from '../../images/logo.svg'
 
 const NAV_HEIGHT = 100 // Nav height in px
 
@@ -72,9 +73,9 @@ const Header = (): ReactElement => {
         <div>
           <a href="#header-container">
             <img
-              src="/SteveHunleyLogo.png"
+              src={logo}
               className="header-logo"
-              alt="Home"
+              alt="Steve Hunley - Developer Portfolio"
             />
           </a>
         </div>
