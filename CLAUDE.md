@@ -19,62 +19,116 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Pre-commit Hooks
 
-The project uses Husky with pre-commit hooks that automatically run:
+The project uses Husky with lint-staged for pre-commit hooks that automatically run:
 
-1. Prettier formatting
-2. Stylelint for CSS
-3. ESLint fix and check
+1. ESLint fix for JavaScript/TypeScript files
 
 ## Architecture Overview
 
-This is a React TypeScript portfolio website built with **Vite** (migrated from Create React App). The application follows a component-based architecture with clean separation of concerns.
+This is a React TypeScript portfolio website built with **Vite**. The application follows a component-based architecture with clean separation of concerns and modular structure.
 
-### Key Structure
+### Project Structure
 
-- **Components**: Located in `src/components/`, each component has its own directory with `.tsx`, `.css`, and `index.ts` files
-- **Hooks**: Custom React hooks in `src/hooks/` including `useGitHubStats` and `useWindowSize`
-- **Utils**: Shared constants and utilities in `src/utils/`
+```
+src/
+├── components/           # Reusable UI components
+│   ├── About/           # About section with headshot and skills
+│   ├── Bio/             # Bio component
+│   ├── Button/          # Reusable button component
+│   ├── Contact/         # Contact form/section
+│   ├── Email/           # Fixed email contact link
+│   ├── Footer/          # Site footer
+│   ├── Header/          # Navigation header
+│   ├── Icons/           # SVG icon components (ExternalLink, GitHub)
+│   ├── Jobs/            # Work experience section
+│   ├── Main/            # Main content container
+│   ├── ProjectCard/     # Individual project display component
+│   ├── Projects/        # Projects showcase section
+│   ├── SideBar/         # Mobile navigation sidebar
+│   └── SocialMedia/     # Fixed social media links
+├── data/                # Static data and configuration
+│   └── projects.ts      # Project portfolio data
+├── hooks/               # Custom React hooks
+│   ├── useGitHubStats.tsx  # GitHub API integration
+│   └── useWindowSize.tsx   # Responsive design hook
+├── images/              # Image assets
+├── types/               # TypeScript type definitions
+│   └── Project.ts       # Project interface definition
+└── utils/               # Shared utilities and constants
+    ├── constants.ts     # Application constants
+    └── reportAccessibility.ts  # Accessibility reporting
+```
 
 ### Component Architecture
 
-- **Header**: Navigation with scroll-hide functionality and responsive sidebar
-- **Main**: Contains the main content sections (About, Jobs, Projects, Contact)
-- **Footer**: Site footer
-- **SocialMedia**: Fixed social media links
-- **Email**: Fixed email contact link
+Each component follows a consistent structure:
+- `ComponentName.tsx` - Main component file
+- `ComponentName.css` - Component-specific styles
+- `index.ts` - Export barrel for clean imports
+
+#### Key Components
+
+- **Header**: Navigation with responsive behavior and sidebar integration
+- **Main**: Contains all main content sections (About, Jobs, Projects, Contact)
+- **About**: Split into AboutHeadshot and AboutSkills subcomponents
+- **Projects**: Displays project cards using ProjectCard component
+- **SocialMedia**: Fixed positioning with GitHub and LinkedIn icons
+- **SideBar**: Mobile navigation using react-burger-menu
+
+### Data Management
+
+- **Projects**: Centralized in `src/data/projects.ts` with type safety via `Project` interface
+- **Types**: TypeScript interfaces in `src/types/` for type safety
+- **Constants**: Shared constants in `src/utils/constants.ts`
 
 ### Key Features
 
 - Responsive design with mobile-first approach
-- Scroll-triggered header hide/show behavior
-- GitHub API integration for portfolio stats
-- Accessibility features with skip links and ARIA labels
-- Component-based CSS with individual stylesheets
+- TypeScript for type safety
+- Component-based CSS with modular stylesheets
+- GitHub API integration for dynamic stats
+- Accessibility features with proper ARIA labels
+- Optimized asset handling through Vite
 
 ### Build System - Vite
 
-- Fast development server with instant HMR
-- ES modules support for modern browsers
-- Optimized production builds with Rollup
-- TypeScript support out of the box
+- Development server on port 3000 with auto-open
+- Build output to `build/` directory
+- Optimized dependencies caching for React ecosystem
+- ES modules with modern JavaScript support
 
 ### TypeScript Configuration
 
-- Strict mode enabled
-- Target: ES2020 with modern library support
-- JSX: React
+- Strict mode enabled for better type safety
+- Target: ES2020 with DOM libraries
+- JSX: React mode
 - ES modules with Node resolution
-- Isolated modules for better compatibility
+- Isolated modules for Vite compatibility
+- No emit mode (Vite handles transpilation)
 
-### Code Style
+### Code Quality Tools
 
-- ESLint with TypeScript, React, and accessibility rules
-- Prettier for code formatting
-- Single quotes preferred
-- Standard TypeScript configuration optimized for Vite
+- **ESLint**: TypeScript, React, accessibility, and Prettier integration
+- **Prettier**: Code formatting with single quotes preference
+- **Stylelint**: CSS linting with standard configuration
+- **Husky**: Git hooks for automated quality checks
+
+### Dependencies
+
+#### Core
+- React 18.2.0 with TypeScript support
+- react-burger-menu for mobile navigation
+- web-vitals for performance monitoring
+
+#### Development Tools
+- Vite 5.0.0 for build tooling
+- TypeScript 5.0.0 for type checking
+- ESLint ecosystem for code quality
+- Accessibility testing with @axe-core/react
 
 ### Asset Handling
 
 - Public assets served from `/public` directory
-- Static assets referenced with `/` prefix (e.g., `/logo.png`)
-- Vite handles asset optimization and bundling automatically
+- Image assets for projects and branding
+- SVG icons as React components
+- Static assets referenced with `/` prefix for proper routing
