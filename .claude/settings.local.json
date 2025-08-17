@@ -14,7 +14,9 @@
       "Bash(npx tsc:*)",
       "Bash(npm run lint:*)",
       "Bash(npx stylelint:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(npm run test:coverage:*)",
+      "Bash(npm run test:*)"
     ],
     "deny": [],
     "ask": []

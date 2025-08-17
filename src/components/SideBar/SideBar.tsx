@@ -4,17 +4,20 @@ import Button from '../Button'
 import useWindowSize, { Size } from '../../hooks/useWindowSize'
 import { MOBILE_BREAKPOINT } from '../../utils/constants'
 
-const getMainElem = (): HTMLElement => document.getElementsByTagName('main')[0]
+const getMainElem = (): HTMLElement | null =>
+  document.getElementsByTagName('main')[0] || null
 
 const handleHamburgerOnChange = (
   e: React.ChangeEvent<HTMLInputElement>
 ): void => {
   const mainElem = getMainElem()
 
-  if (e.target.checked) {
-    mainElem.classList.add('blur')
-  } else {
-    mainElem.classList.remove('blur')
+  if (mainElem) {
+    if (e.target.checked) {
+      mainElem.classList.add('blur')
+    } else {
+      mainElem.classList.remove('blur')
+    }
   }
 }
 
@@ -31,7 +34,10 @@ const SideBar = (): ReactElement => {
       windowSize.width !== undefined &&
       windowSize.width > MOBILE_BREAKPOINT
     ) {
-      getMainElem().classList.remove('blur')
+      const mainElem = getMainElem()
+      if (mainElem) {
+        mainElem.classList.remove('blur')
+      }
     }
 
     const menuToggle = document.getElementById(
@@ -46,7 +52,10 @@ const SideBar = (): ReactElement => {
   useEffect(() => {
     const handleMenuClick = (): void => {
       if (hamburgerRef.current) {
-        getMainElem().classList.remove('blur')
+        const mainElem = getMainElem()
+        if (mainElem) {
+          mainElem.classList.remove('blur')
+        }
         hamburgerRef.current.checked = false
       }
     }
