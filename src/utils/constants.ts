@@ -1,1 +1,4 @@
-export const BIG_SCREEN_WIDTH = 768
+// Breakpoint constants
+export const MOBILE_BREAKPOINT = 768
+export const TABLET_BREAKPOINT = 1080
+export const DESKTOP_BREAKPOINT = 1440

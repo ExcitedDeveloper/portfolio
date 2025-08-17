@@ -2,7 +2,7 @@ import React, { ReactElement, useEffect, useRef } from 'react'
 import './SideBar.css'
 import Button from '../Button'
 import useWindowSize, { Size } from '../../hooks/useWindowSize'
-import { BIG_SCREEN_WIDTH } from '../../utils/constants'
+import { MOBILE_BREAKPOINT } from '../../utils/constants'
 
 const getMainElem = (): HTMLElement => document.getElementsByTagName('main')[0]
 
@@ -18,7 +18,7 @@ const handleHamburgerOnChange = (
   }
 }
 
-const SideBar3 = (): ReactElement => {
+const SideBar = (): ReactElement => {
   const hamburgerRef = useRef<HTMLInputElement>(null)
 
   const windowSize: Size = useWindowSize()
@@ -27,7 +27,10 @@ const SideBar3 = (): ReactElement => {
   // user resizes the browser.  Remove the blur and
   // check the menu toggle to close the sidebar
   useEffect(() => {
-    if (windowSize.width !== undefined && windowSize.width > BIG_SCREEN_WIDTH) {
+    if (
+      windowSize.width !== undefined &&
+      windowSize.width > MOBILE_BREAKPOINT
+    ) {
       getMainElem().classList.remove('blur')
     }
 
@@ -117,4 +120,4 @@ const SideBar3 = (): ReactElement => {
   )
 }
 
-export default SideBar3
+export default SideBar
