@@ -62,6 +62,7 @@ src/
 ### Component Architecture
 
 Each component follows a consistent structure:
+
 - `ComponentName.tsx` - Main component file
 - `ComponentName.css` - Component-specific styles
 - `index.ts` - Export barrel for clean imports
@@ -116,11 +117,13 @@ Each component follows a consistent structure:
 ### Dependencies
 
 #### Core
+
 - React 18.2.0 with TypeScript support
 - react-burger-menu for mobile navigation
 - web-vitals for performance monitoring
 
 #### Development Tools
+
 - Vite 5.0.0 for build tooling
 - TypeScript 5.0.0 for type checking
 - ESLint ecosystem for code quality
