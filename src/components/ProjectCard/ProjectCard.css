@@ -38,6 +38,11 @@
   font-size: clamp(1.5rem, 5vw, 1.75rem);
 }
 
+.project-links a {
+  position: relative;
+  z-index: 1;
+}
+
 .project-portfolio .project-title a {
   position: relative;
   z-index: 1;
@@ -93,11 +98,6 @@
   justify-content: flex-end;
   margin-left: 0;
   margin-right: -0.625rem;
-}
-
-.project-links a {
-  position: relative;
-  z-index: 1;
 }
 
 .project-portfolio:nth-of-type(2n) .project-links a {

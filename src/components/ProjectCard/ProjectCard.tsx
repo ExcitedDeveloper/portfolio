@@ -20,7 +20,8 @@ const ProjectCard = ({ project }: ProjectCardProps): ReactElement => {
         <div>
           <p className="project-overline">Featured Project</p>
           <h3 className="project-title">
-            {project.liveUrl ? (
+            {project.liveUrl
+              ? (
               <a
                 href={project.liveUrl}
                 rel="noopener noreferrer"
@@ -28,9 +29,10 @@ const ProjectCard = ({ project }: ProjectCardProps): ReactElement => {
               >
                 {project.title}
               </a>
-            ) : (
-              project.title
-            )}
+                )
+              : (
+                  project.title
+                )}
           </h3>
           <div className="project-description">
             <p dangerouslySetInnerHTML={{ __html: project.description }} />

@@ -12,7 +12,9 @@
       "Bash(cp:*)",
       "Bash(npm run lint)",
       "Bash(npx tsc:*)",
-      "Bash(npm run lint:*)"
+      "Bash(npm run lint:*)",
+      "Bash(npx stylelint:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []

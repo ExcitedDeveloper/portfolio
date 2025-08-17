@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: 'portfolio',
     title: 'Portfolio',
     description:
-      "My portfolio website to provide access to projects I've worked on and insight into my background.",
+      'My portfolio website to provide access to projects I\'ve worked on and insight into my background.',
     technologies: ['React', 'JavaScript', 'HTML', 'CSS'],
     githubUrl: 'https://github.com/ExcitedDeveloper/portfolio',
     liveUrl: 'https://www.stevehunley.dev',
